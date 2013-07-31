@@ -1,24 +1,27 @@
 Logfile initialized
 [INFO] logfile = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
+[INFO] logfile = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
+[DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py emulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854 armeabi-v7a
 [DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py simulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854
 [INFO] Launching Android emulator...one moment
+moment
 [DEBUG] From: C:\Program Files\Android\android-sdk\tools\emulator.exe
 [DEBUG] SDCard: C:\Documents and Settings\amith.mk\.titanium\android2.sdcard
 [DEBUG] AVD ID: 25
 [DEBUG] AVD Skin: WVGA854
 [DEBUG] AVD ABI: armeabi-v7a
 [DEBUG] SDK: C:\Program Files\Android\android-sdk
-[INFO] Building Whats Today for Android ... one moment
-[INFO] Emulator is running.
 [INFO] Titanium SDK version: 3.1.1 (06/15/13 16:09 f7592c1)
 [DEBUG] Waiting for device to be ready ...
+[INFO] Emulator is running.
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.000000 seconds on emulator to get ready
+[DEBUG] waited 0.031000 seconds on emulator to get ready
 [DEBUG] com.mkamithkumar.whatstoday installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\app.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\app.js
 [DEBUG] LiveView not enabled
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
@@ -30,3 +33,4 @@ Logfile initialized
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.mkamithkumar.whatstoday/.WhatsTodayActivity }
 Warning: Activity not started, its current task has been brought to the front
 
+[INFO] Relaunched Whats Today ... Application should be running.

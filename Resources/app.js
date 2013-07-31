@@ -15,8 +15,22 @@ var picker = Ti.UI.createPicker({
 	value : new Date()
 });
 
+//table view search bar
+
+var searchBar=Ti.UI.createSearchBar({
+		showCancel:true,
+		hintText:'type name to search'
+});
+
+
 //Intialization of table view
-var myTable = Ti.UI.createTableView();
+
+var myTable = Ti.UI.createTableView({
+	search : searchBar, //here will set search bar
+	filterCaseInsensitive:true,
+	filterAttribute : 'filter', //here is the search filter which appears in TableViewRow as an attribute(you can define it in other name)
+}); 
+
 
 //No Content label Initialization
 var nocontent_label = Ti.UI.createLabel({
@@ -53,13 +67,6 @@ actInd.color = '#000';
 actInd.message = 'Fetching Content...please wait';
 actInd.height = Ti.Platform.displayCaps.platformHeight / 2;
 
-//table view search bar
-var search = Titanium.UI.createSearchBar({
-    barColor:'#000', 
-    showCancel:true,
-    height:43,
-    top:0,
-});
 
 // Date manipulation to display Month and date in the Action Bar title
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -154,6 +161,7 @@ self.addEventListener('open', function(e) {
 				}
 			});
 		});
+		
 		// entertainment menu item
 		var entertainment = menu.add({
 			title : "Entertainment",
@@ -281,6 +289,7 @@ function getDataByDate(selectedDate, collection, category) {
 				});
 				for (var j = 0; j < jsonData.nationality[i].items.length; j++) {
 					var row = Titanium.UI.createTableViewRow({
+						filter:jsonData.nationality[i].items[j].name,// here you will set the filter content which will be searched.
 						rightImage : ''
 					});
 					var name = Titanium.UI.createLabel({
@@ -332,12 +341,7 @@ function getDataByDate(selectedDate, collection, category) {
 	// request is actually sent with this statement
 }
 
-// searchbar when clicking table view
-
-myTable.addEventListener('click', function(e) {
-        // Clear search bar
-        search.value ="";
-        // hiding and showing the search bar forces it back to its non-focused appearance.
-        search.hide();
-        search.show();   
+// clear search bar value when cancel is clicked
+searchBar.addEventListener('cancel',function(e){
+	searchBar.value="";
 });
