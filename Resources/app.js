@@ -41,6 +41,7 @@ var myTable = Ti.UI.createTableView({
 var nocontent_label = Ti.UI.createLabel({
 	color : '#000',
 	font : {
+		fontFamily:'Trebuchet MS',
 		fontSize : 18
 	},
 	shadowColor : '#aaa',
@@ -65,8 +66,7 @@ var actInd = Titanium.UI.createActivityIndicator({
 
 actInd.font = {
 	fontFamily : 'Trebuchet MS',
-	fontSize : 18,
-	fontWeight : 'bold'
+	fontSize : 18
 };
 actInd.color = '#000';
 actInd.message = 'Fetching Content...please wait';
@@ -295,67 +295,71 @@ function getDataByDate(selectedDate, collection, category) {
 				for (var j = 0; j < jsonData.nationality[i].items.length; j++) {
 					var row = Titanium.UI.createTableViewRow({
 						filter : jsonData.nationality[i].items[j].name, // here you will set the filter content which will be searched.
-
+						backgroundColor : j % 2 == 0 ? '#EEE' : '#FFF'
 					});
 					var pic = Ti.UI.createImageView({
-						image : 'images/6_social_person.png',
-						width : 32,
-						height : 32,
+						image : 'http://upload.wikimedia.org/wikipedia/en/thumb/7/75/Vaali_%28poet%29.jpg/90px-Vaali_%28poet%29.jpg',
+						defaultImage : 'images/6_social_person.png',
+						width : 90,
+						height : 90,
 						left : 4,
-						top : 2
+						top : 2,
+						borderRadius:10,
+						borderColor:"#2B547E",
+						borderWidth:1
 					});
 					var name = Titanium.UI.createLabel({
 						text : jsonData.nationality[i].items[j].name,
 						font : {
-							fontSize : 16,
+							fontFamily:'Trebuchet MS',
+							fontSize : 22,
 							fontWeight : 'bold'
 						},
 						width : 'auto',
 						textAlign : 'left',
 						top : 2,
-						left : 40,
+						left : 100,
 						height : 32
 					});
 
 					var profession = Titanium.UI.createLabel({
 						text : jsonData.nationality[i].items[j].profession,
 						font : {
-							fontSize : 12,
-							fontWeight : 'bold'
+							fontFamily:'Trebuchet MS',
+							fontSize : 16,
 						},
 						width : 150,
 						textAlign : 'left',
-						top : 30,
-						bottom : 0,
-						left : 10,
-						height : 30
+						top : 35,
+						left : 100,
+						height : 40
 					});
 					var dob = Titanium.UI.createLabel({
 						text : '11 June 1990',
 						font : {
-							fontSize : 12,
-							fontWeight : 'bold'
+							fontSize : 16,
 						},
-						width : 80,
+						width : 120,
 						textAlign : 'left',
-						top : 30,
+						top : 35,
 						bottom : 0,
-						left : 170,
-						height : 30
+						left : 250,
+						height : 40
+					});
+					var fbShare = Ti.UI.createImageView({
+						image : 'images/facebook-white-32.png',
+						width : 32,
+						height : 32,
+						left : 380,
+						top : 35
 					});
 					var link = "http://www.wikipedia.org/amith";
-					var wikiLnk = Titanium.UI.createLabel({
-						text : 'www.wikipedia.org/amith',
-						font : {
-							fontSize : 12
-						},
-						color : "#2B547E",
-						width : 150,
-						textAlign : 'left',
-						top : 30,
-						bottom : 0,
-						left : 260,
-						height : 30
+					var wikiLnk = Ti.UI.createImageView({
+						image : 'images/Wikipedia-icon.png',
+						width : 32,
+						height : 32,
+						left : 420,
+						top : 35
 					});
 					wikiLnk.addEventListener('click', function(e) {
 						Titanium.Platform.openURL(link);
@@ -364,8 +368,8 @@ function getDataByDate(selectedDate, collection, category) {
 					row.add(name);
 					row.add(profession);
 					row.add(dob);
+					row.add(fbShare);
 					row.add(wikiLnk);
-					row.hasChild = 'true';
 					row.className = 'coutry_row';
 					section.add(row);
 				}

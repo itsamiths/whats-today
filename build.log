@@ -1,8 +1,11 @@
 Logfile initialized
-[DEBUG] AVD ID: 25
+[INFO] Launching Android emulator...one moment
 [INFO] logfile = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
-[DEBUG] AVD Skin: WVGA854
 [DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py simulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854
+[DEBUG] From: C:\Program Files\Android\android-sdk\tools\emulator.exe
+[DEBUG] SDCard: C:\Documents and Settings\amith.mk\.titanium\android2.sdcard
+[DEBUG] AVD ID: 25
+[DEBUG] AVD Skin: WVGA854
 [DEBUG] AVD ABI: armeabi-v7a
 [DEBUG] SDK: C:\Program Files\Android\android-sdk
 [INFO] Building Whats Today for Android ... one moment
