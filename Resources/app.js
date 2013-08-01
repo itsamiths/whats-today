@@ -1,3 +1,10 @@
+//
+//  app.js
+//  whats-today
+//
+//  Created by amith.mk on 2013-07-31.
+//  Copyright 2013 amith.mk. All rights reserved.
+//
 //Global variables
 var jsonData;
 var selectedDate;
@@ -17,20 +24,18 @@ var picker = Ti.UI.createPicker({
 
 //table view search bar
 
-var searchBar=Ti.UI.createSearchBar({
-		showCancel:true,
-		hintText:'type name to search'
+var searchBar = Ti.UI.createSearchBar({
+	showCancel : true,
+	hintText : 'type name to search'
 });
-
 
 //Intialization of table view
 
 var myTable = Ti.UI.createTableView({
 	search : searchBar, //here will set search bar
-	filterCaseInsensitive:true,
+	filterCaseInsensitive : true,
 	filterAttribute : 'filter', //here is the search filter which appears in TableViewRow as an attribute(you can define it in other name)
-}); 
-
+});
 
 //No Content label Initialization
 var nocontent_label = Ti.UI.createLabel({
@@ -67,7 +72,6 @@ actInd.color = '#000';
 actInd.message = 'Fetching Content...please wait';
 actInd.height = Ti.Platform.displayCaps.platformHeight / 2;
 
-
 // Date manipulation to display Month and date in the Action Bar title
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var d = new Date();
@@ -94,24 +98,24 @@ var deathWindow = Titanium.UI.createWindow({
 	layout : 'vertical'
 });
 // var otherWindow = Titanium.UI.createWindow({
-	// layout : 'vertical'
+// layout : 'vertical'
 // });
 
 // Setup Tabs
 var birthTab = Titanium.UI.createTab({
-	title : 'BIRTH EVENT',
+	title : ' BIRTH EVENT',
 	icon : "images/ic_action_emo_laugh.png",
 	window : birthWindow
 });
 var deathTab = Titanium.UI.createTab({
-	title : 'DEATH EVENT',
+	title : ' DEATH EVENT',
 	icon : "images/ic_action_emo_cry.png",
 	window : deathWindow
 });
 // var otherTab = Titanium.UI.createTab({
-	// title : 'OTHERS',
-	// icon : "images/ic_action_emo_cool.png",
-	// window : otherWindow
+// title : 'OTHERS',
+// icon : "images/ic_action_emo_cool.png",
+// window : otherWindow
 // });
 
 // Add Tabs
@@ -161,7 +165,6 @@ self.addEventListener('open', function(e) {
 				}
 			});
 		});
-		
 		// entertainment menu item
 		var entertainment = menu.add({
 			title : "Entertainment",
@@ -256,10 +259,10 @@ deathTab.addEventListener("focus", function(e) {
 
 // other tab focussed
 // otherTab.addEventListener("focus", function(e) {
-	// collection = "";
-	// // set collection global variable value
-	// // call to data fetching method
-	// getDataByDate(selectedDate, collection, category);
+// collection = "";
+// // set collection global variable value
+// // call to data fetching method
+// getDataByDate(selectedDate, collection, category);
 // });
 
 // data fetching method
@@ -289,8 +292,15 @@ function getDataByDate(selectedDate, collection, category) {
 				});
 				for (var j = 0; j < jsonData.nationality[i].items.length; j++) {
 					var row = Titanium.UI.createTableViewRow({
-						filter:jsonData.nationality[i].items[j].name,// here you will set the filter content which will be searched.
-						rightImage : ''
+						filter : jsonData.nationality[i].items[j].name, // here you will set the filter content which will be searched.
+
+					});
+					var pic = Ti.UI.createImageView({
+						image : 'images/6_social_person.png',
+						width : 32,
+						height : 32,
+						left : 4,
+						top : 2
 					});
 					var name = Titanium.UI.createLabel({
 						text : jsonData.nationality[i].items[j].name,
@@ -311,15 +321,48 @@ function getDataByDate(selectedDate, collection, category) {
 							fontSize : 12,
 							fontWeight : 'bold'
 						},
-						width : 'auto',
+						width : 150,
 						textAlign : 'left',
 						top : 30,
 						bottom : 0,
-						left : 60,
-						height : 25
+						left : 10,
+						height : 30
 					});
+					var dob = Titanium.UI.createLabel({
+						text : '11 June 1990',
+						font : {
+							fontSize : 12,
+							fontWeight : 'bold'
+						},
+						width : 80,
+						textAlign : 'left',
+						top : 30,
+						bottom : 0,
+						left : 170,
+						height : 30
+					});
+					var link = "http://www.wikipedia.org/amith";
+					var wikiLnk = Titanium.UI.createLabel({
+						text : 'www.wikipedia.org/amith',
+						font : {
+							fontSize : 12
+						},
+						color : "#2B547E",
+						width : 150,
+						textAlign : 'left',
+						top : 30,
+						bottom : 0,
+						left : 260,
+						height : 30
+					});
+					wikiLnk.addEventListener('click', function(e) {
+						Titanium.Platform.openURL(link);
+					});
+					row.add(pic);
 					row.add(name);
 					row.add(profession);
+					row.add(dob);
+					row.add(wikiLnk);
 					row.hasChild = 'true';
 					row.className = 'coutry_row';
 					section.add(row);
@@ -342,6 +385,6 @@ function getDataByDate(selectedDate, collection, category) {
 }
 
 // clear search bar value when cancel is clicked
-searchBar.addEventListener('cancel',function(e){
-	searchBar.value="";
+searchBar.addEventListener('cancel', function(e) {
+	searchBar.value = "";
 });

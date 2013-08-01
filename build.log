@@ -1,23 +1,23 @@
 Logfile initialized
 [INFO] logfile = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
 [INFO] logfile = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
-[DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py emulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854 armeabi-v7a
 [DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py simulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854
+[DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py emulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854 armeabi-v7a
 [INFO] Launching Android emulator...one moment
-moment
+[INFO] Building Whats Today for Android ... one moment
 [DEBUG] From: C:\Program Files\Android\android-sdk\tools\emulator.exe
 [DEBUG] SDCard: C:\Documents and Settings\amith.mk\.titanium\android2.sdcard
 [DEBUG] AVD ID: 25
 [DEBUG] AVD Skin: WVGA854
 [DEBUG] AVD ABI: armeabi-v7a
 [DEBUG] SDK: C:\Program Files\Android\android-sdk
+[INFO] Emulator is running.
 [INFO] Titanium SDK version: 3.1.1 (06/15/13 16:09 f7592c1)
 [DEBUG] Waiting for device to be ready ...
-[INFO] Emulator is running.
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.031000 seconds on emulator to get ready
-[DEBUG] com.mkamithkumar.whatstoday installed? True
+[DEBUG] waited 0.016000 seconds on emulator to get ready
+[DEBUG] com.mkamithkumar.whatstoday installed? False
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
@@ -28,9 +28,56 @@ moment
 [DEBUG] found special platform files dir = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\platform\android
 [INFO] Detected custom ApplicationManifest.xml -- no Titanium version migration supported
 [DEBUG] Added 'screenSize' to <activity android:configChanges> because targeted api level 16 is >= 13
-[INFO] Re-launching application ... Whats Today
-[INFO] Launching application ... Whats Today
-[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.mkamithkumar.whatstoday/.WhatsTodayActivity }
-Warning: Activity not started, its current task has been brought to the front
-
-[INFO] Relaunched Whats Today ... Application should be running.
+[DEBUG] creating unsigned apk: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/images/6_social_person.png
+[DEBUG] from resource zip => assets/Resources/images/actionbar_background_tile.png
+[DEBUG] from resource zip => assets/Resources/images/choosecategory.png
+[DEBUG] from resource zip => assets/Resources/images/datepicker.png
+[DEBUG] from resource zip => assets/Resources/images/ic_action_emo_cool.png
+[DEBUG] from resource zip => assets/Resources/images/ic_action_emo_cry.png
+[DEBUG] from resource zip => assets/Resources/images/ic_action_emo_laugh.png
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/appicon.png
+[DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/drawable/btn_check_buttonless_on_64.png
+[DEBUG] from resource zip => res/drawable/btn_more_64.png
+[DEBUG] from resource zip => res/drawable/disclosure_64.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => res/layout/titanium_ui_list_header_or_footer.xml
+[DEBUG] from resource zip => res/layout/titanium_ui_list_item.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_64.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG] installing native SDK libs
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.016000 seconds on emulator to get ready
+[INFO] Installing application on emulator
