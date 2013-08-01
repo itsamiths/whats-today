@@ -272,6 +272,7 @@ function getDataByDate(selectedDate, collection, category) {
 	self.remove(nocontent_label);
 	self.remove(myTable);
 	self.remove(actInd);
+	searchBar.show();
 	var tableData = [];
 	//adding ajax progress indicator
 	self.add(actInd);
@@ -285,6 +286,7 @@ function getDataByDate(selectedDate, collection, category) {
 			// if no data then show no content label
 			if (jsonData.nationality.length == 0) {
 				self.add(nocontent_label);
+				searchBar.hide();
 			}
 			for (var i = 0; i < jsonData.nationality.length; i++) {
 				var section = Titanium.UI.createTableViewSection({
