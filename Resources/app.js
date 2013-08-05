@@ -5,6 +5,13 @@
 //  Created by amith.mk on 2013-07-31.
 //  Copyright 2013 amith.mk. All rights reserved.
 //
+// Include Scule Library
+var scule = require('com.scule');
+scule.debug(false);
+
+// create collection
+var scollection = scule.factoryCollection('scule+dummy://titanium');
+
 //Global variables
 var jsonData;
 var selectedDate;
@@ -41,7 +48,7 @@ var myTable = Ti.UI.createTableView({
 var nocontent_label = Ti.UI.createLabel({
 	color : '#000',
 	font : {
-		fontFamily:'Trebuchet MS',
+		fontFamily : 'Trebuchet MS',
 		fontSize : 18
 	},
 	shadowColor : '#aaa',
@@ -143,6 +150,10 @@ self.addEventListener('open', function(e) {
 			showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS
 		});
 		dateMenuItem.addEventListener("click", function(e) {
+			searchBar.value = "";
+			// clear search box value
+			searchBar.blur();
+			// blur search box
 			picker.showDatePickerDialog({
 				value : new Date(),
 				callback : function(e) {
@@ -160,7 +171,7 @@ self.addEventListener('open', function(e) {
 
 						}
 						// call to data fetching method
-						getDataByDate(selectedDate, collection, category);
+						getLocalData(selectedDate, collection, category);
 					}
 				}
 			});
@@ -175,7 +186,7 @@ self.addEventListener('open', function(e) {
 			category = "entertainment";
 			// set category global variable value
 			// call to data fetching method
-			getDataByDate(selectedDate, collection, category);
+			getLocalData(selectedDate, collection, category);
 		});
 		// military menu item
 		var military = menu.add({
@@ -187,7 +198,7 @@ self.addEventListener('open', function(e) {
 			category = "military";
 			// set category global variable value
 			// call to data fetching method
-			getDataByDate(selectedDate, collection, category);
+			getLocalData(selectedDate, collection, category);
 		});
 		// political menu item
 		var political = menu.add({
@@ -199,7 +210,7 @@ self.addEventListener('open', function(e) {
 			category = "political";
 			// set category global variable value
 			// call to data fetching method
-			getDataByDate(selectedDate, collection, category);
+			getLocalData(selectedDate, collection, category);
 		});
 		// sports menu item
 		var sports = menu.add({
@@ -211,7 +222,7 @@ self.addEventListener('open', function(e) {
 			category = "sports";
 			// set category global variable value
 			// call to data fetching method
-			getDataByDate(selectedDate, collection, category);
+			getLocalData(selectedDate, collection, category);
 		});
 		// economics menu item
 		var economics = menu.add({
@@ -223,7 +234,7 @@ self.addEventListener('open', function(e) {
 			category = "economic";
 			// set category global variable value
 			// call to data fetching method
-			getDataByDate(selectedDate, collection, category);
+			getLocalData(selectedDate, collection, category);
 		});
 		// others menu item
 		var others = menu.add({
@@ -235,7 +246,7 @@ self.addEventListener('open', function(e) {
 			category = "N/A";
 			// set category global variable value
 			// call to data fetching method
-			getDataByDate(selectedDate, collection, category);
+			getLocalData(selectedDate, collection, category);
 		});
 
 	}
@@ -243,18 +254,18 @@ self.addEventListener('open', function(e) {
 
 // birth tab focussed
 birthTab.addEventListener("focus", function(e) {
-	collection = "info_birth";
 	// set collection global variable value
+	collection = "info_birth";
 	// call to data fetching method
-	getDataByDate(selectedDate, collection, category);
+	getLocalData(selectedDate, collection, category);
 });
 
 // death tab focussed
 deathTab.addEventListener("focus", function(e) {
-	collection = "info_death";
 	// set collection global variable value
+	collection = "info_death";
 	// call to data fetching method
-	getDataByDate(selectedDate, collection, category);
+	getLocalData(selectedDate, collection, category);
 });
 
 // other tab focussed
@@ -264,6 +275,133 @@ deathTab.addEventListener("focus", function(e) {
 // // call to data fetching method
 // getDataByDate(selectedDate, collection, category);
 // });
+
+// Storing AjaxData Locally
+function getLocalData(selectedDate, collection, category) {
+
+	var keyFind = scollection.find({
+		key : selectedDate + collection + category
+	});
+	if (keyFind.length > 0) {
+		showData(JSON.parse(keyFind[0]['value'].text));
+		Ti.API.info('inside not ajax');
+	} else {
+		Ti.API.info('inside ajax');
+		getDataByDate(selectedDate, collection, category);
+	}
+
+	//jsonData = JSON.parse(o[0]['value'].text);
+}
+
+function showData(jsonValue) {
+	//remove nocontent label
+	self.remove(nocontent_label);
+	self.remove(myTable);
+	self.remove(actInd);
+	searchBar.show();
+	var tableData = [];
+	//adding ajax progress indicator
+	self.add(actInd);
+	actInd.show();
+	// if no data then show no content label
+	if (jsonValue.nationality.length == 0) {
+		self.add(nocontent_label);
+		searchBar.hide();
+	}
+	for (var i = 0; i < jsonValue.nationality.length; i++) {
+		var section = Titanium.UI.createTableViewSection({
+			headerTitle : jsonValue.nationality[i].nation,
+		});
+		for (var j = 0; j < jsonValue.nationality[i].items.length; j++) {
+			var row = Titanium.UI.createTableViewRow({
+				filter : jsonValue.nationality[i].items[j].name, // here you will set the filter content which will be searched.
+				backgroundColor : j % 2 == 0 ? '#EEE' : '#FFF'
+			});
+			var pic = Ti.UI.createImageView({
+				image : 'http://upload.wikimedia.org/wikipedia/en/thumb/7/75/Vaali_%28poet%29.jpg/90px-Vaali_%28poet%29.jpg',
+				defaultImage : 'images/6_social_person.png',
+				width : 90,
+				height : 90,
+				left : 4,
+				top : 2,
+				borderRadius : 10,
+				//borderColor:"#2B547E",
+				borderWidth : 1
+			});
+			var name = Titanium.UI.createLabel({
+				text : jsonValue.nationality[i].items[j].name,
+				font : {
+					fontFamily : 'Trebuchet MS',
+					fontSize : 22,
+					fontWeight : 'bold'
+				},
+				width : 'auto',
+				textAlign : 'left',
+				top : 2,
+				left : 100,
+				height : 32
+			});
+
+			var profession = Titanium.UI.createLabel({
+				text : jsonValue.nationality[i].items[j].profession,
+				font : {
+					fontFamily : 'Trebuchet MS',
+					fontSize : 16,
+				},
+				width : 150,
+				textAlign : 'left',
+				top : 35,
+				left : 100,
+				height : 40
+			});
+			var dob = Titanium.UI.createLabel({
+				text : '11 June 1990',
+				font : {
+					fontSize : 16,
+				},
+				width : 120,
+				textAlign : 'left',
+				top : 35,
+				bottom : 0,
+				left : 250,
+				height : 40
+			});
+			var fbShare = Ti.UI.createImageView({
+				image : 'images/facebook-32.png',
+				width : 32,
+				height : 32,
+				left : 380,
+				top : 35
+			});
+			fbShare.addEventListener('click', function(e) {
+				alert("under construction");
+			});
+			var link = "http://www.wikipedia.org/amith";
+			var wikiLnk = Ti.UI.createImageView({
+				image : 'images/Wikipedia-icon.png',
+				width : 32,
+				height : 32,
+				left : 420,
+				top : 35
+			});
+			wikiLnk.addEventListener('click', function(e) {
+				Titanium.Platform.openURL(link);
+			});
+			row.add(pic);
+			row.add(name);
+			row.add(profession);
+			row.add(dob);
+			row.add(fbShare);
+			row.add(wikiLnk);
+			row.className = 'coutry_row';
+			section.add(row);
+		}
+		tableData.push(section);
+	}
+	myTable.setData(tableData);
+	self.add(myTable);
+	actInd.hide();
+}
 
 // data fetching method
 function getDataByDate(selectedDate, collection, category) {
@@ -283,100 +421,12 @@ function getDataByDate(selectedDate, collection, category) {
 			// success!  json is an object of the returned JSON data
 			Ti.API.info('success, HTTP status = ' + this.status);
 			jsonData = JSON.parse(this.responseData);
-			// if no data then show no content label
-			if (jsonData.nationality.length == 0) {
-				self.add(nocontent_label);
-				searchBar.hide();
-			}
-			for (var i = 0; i < jsonData.nationality.length; i++) {
-				var section = Titanium.UI.createTableViewSection({
-					headerTitle : jsonData.nationality[i].nation
-				});
-				for (var j = 0; j < jsonData.nationality[i].items.length; j++) {
-					var row = Titanium.UI.createTableViewRow({
-						filter : jsonData.nationality[i].items[j].name, // here you will set the filter content which will be searched.
-						backgroundColor : j % 2 == 0 ? '#EEE' : '#FFF'
-					});
-					var pic = Ti.UI.createImageView({
-						image : 'http://upload.wikimedia.org/wikipedia/en/thumb/7/75/Vaali_%28poet%29.jpg/90px-Vaali_%28poet%29.jpg',
-						defaultImage : 'images/6_social_person.png',
-						width : 90,
-						height : 90,
-						left : 4,
-						top : 2,
-						borderRadius:10,
-						borderColor:"#2B547E",
-						borderWidth:1
-					});
-					var name = Titanium.UI.createLabel({
-						text : jsonData.nationality[i].items[j].name,
-						font : {
-							fontFamily:'Trebuchet MS',
-							fontSize : 22,
-							fontWeight : 'bold'
-						},
-						width : 'auto',
-						textAlign : 'left',
-						top : 2,
-						left : 100,
-						height : 32
-					});
-
-					var profession = Titanium.UI.createLabel({
-						text : jsonData.nationality[i].items[j].profession,
-						font : {
-							fontFamily:'Trebuchet MS',
-							fontSize : 16,
-						},
-						width : 150,
-						textAlign : 'left',
-						top : 35,
-						left : 100,
-						height : 40
-					});
-					var dob = Titanium.UI.createLabel({
-						text : '11 June 1990',
-						font : {
-							fontSize : 16,
-						},
-						width : 120,
-						textAlign : 'left',
-						top : 35,
-						bottom : 0,
-						left : 250,
-						height : 40
-					});
-					var fbShare = Ti.UI.createImageView({
-						image : 'images/facebook-white-32.png',
-						width : 32,
-						height : 32,
-						left : 380,
-						top : 35
-					});
-					var link = "http://www.wikipedia.org/amith";
-					var wikiLnk = Ti.UI.createImageView({
-						image : 'images/Wikipedia-icon.png',
-						width : 32,
-						height : 32,
-						left : 420,
-						top : 35
-					});
-					wikiLnk.addEventListener('click', function(e) {
-						Titanium.Platform.openURL(link);
-					});
-					row.add(pic);
-					row.add(name);
-					row.add(profession);
-					row.add(dob);
-					row.add(fbShare);
-					row.add(wikiLnk);
-					row.className = 'coutry_row';
-					section.add(row);
-				}
-				tableData.push(section);
-			}
-			myTable.setData(tableData);
-			self.add(myTable);
+			showData(jsonData);
+			scollection.save({
+				key : selectedDate + collection + category,
+				value : this.responseData
+			});
+			scollection.commit();
 			actInd.hide();
 		},
 		onerror : function(e) {
@@ -390,7 +440,8 @@ function getDataByDate(selectedDate, collection, category) {
 	// request is actually sent with this statement
 }
 
-// clear search bar value when cancel is clicked
+// clear search bar value when cancelled
 searchBar.addEventListener('cancel', function(e) {
 	searchBar.value = "";
 });
+
