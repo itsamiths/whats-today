@@ -9,6 +9,10 @@
 var scule = require('com.scule');
 scule.debug(false);
 
+//Instantiating facebook module
+var fb = require('facebook');
+fb.appid = '1406202192928906';
+fb.permissions = ['publish_stream'];
 // create collection
 var scollection = scule.factoryCollection('scule+dummy://titanium');
 
@@ -284,7 +288,7 @@ function getLocalData(selectedDate, collection, category) {
 	});
 	if (keyFind.length > 0) {
 		showData(JSON.parse(keyFind[0]['value'].text));
-		Ti.API.info('inside not ajax');
+		Ti.API.info('not inside ajax');
 	} else {
 		Ti.API.info('inside ajax');
 		getDataByDate(selectedDate, collection, category);
@@ -374,10 +378,17 @@ function showData(jsonValue) {
 				top : 35
 			});
 			fbShare.addEventListener('click', function(e) {
-				alert("under construction");
+				clickedPicLink = e.source.parent.children[0].image;
+				clickedName = e.source.parent.children[1].text;
+				clickedDOB = e.source.parent.children[3].text;
+				clickedWikiLink = e.source.parent.children[5].lnk;
+				professoinDetails = e.source.parent.children[2].text;
+				// call to facebook authorize method
+				fb_share(clickedName, clickedDOB, clickedWikiLink, clickedPicLink, professoinDetails);
 			});
 			var link = "http://www.wikipedia.org/amith";
 			var wikiLnk = Ti.UI.createImageView({
+				lnk : link,
 				image : 'images/Wikipedia-icon.png',
 				width : 32,
 				height : 32,
@@ -445,3 +456,56 @@ searchBar.addEventListener('cancel', function(e) {
 	searchBar.value = "";
 });
 
+//method to authorize facebook login
+function fb_share(name, dob, wikilnk, piclink, professiondet) {
+	var count = 0;
+	if (collection == "info_birth") {
+		eventText = "Birthday of";
+		eventDesctext = "born on";
+	} else {
+		eventText = "Demise of";
+		eventDesctext = "passed away on";
+	}
+	fb.forceDialogAuth = true;
+	fb.addEventListener('login', function(e) {
+		count++;
+		if (e.success) {
+			var data = {
+		link : wikilnk,
+		name : dob + " - " + eventText + " " + name,
+		message : eventText + " - " + name,
+		caption : "Wikipedia link of " + name,
+		picture : piclink,
+		description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+	};
+	fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
+		}
+		if (e.error) {
+			Ti.API.info('login error' + e.error);
+		}
+	});
+	fb.authorize();
+	if (count == 0) {
+		var data = {
+		link : wikilnk,
+		name : dob + " - " + eventText + " " + name,
+		message : eventText + " - " + name,
+		caption : "Wikipedia link of " + name,
+		picture : piclink,
+		description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+	};
+	fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
+	}
+}
+
+// method to show facebook wall post status
+function showRequestResult(e) {
+	var s = '';
+	if (e.success) {
+		s = 'Event Shared on your Facebook Wall..!!';
+
+	} else {
+		s = 'Something Went Wrong. We will come back soon';
+	}
+	alert(s);
+}
