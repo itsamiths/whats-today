@@ -458,7 +458,6 @@ searchBar.addEventListener('cancel', function(e) {
 
 //method to authorize facebook login
 function fb_share(name, dob, wikilnk, piclink, professiondet) {
-	var count = 0;
 	if (collection == "info_birth") {
 		eventText = "Birthday of";
 		eventDesctext = "born on";
@@ -466,36 +465,37 @@ function fb_share(name, dob, wikilnk, piclink, professiondet) {
 		eventText = "Demise of";
 		eventDesctext = "passed away on";
 	}
-	fb.forceDialogAuth = true;
-	fb.addEventListener('login', function(e) {
-		count++;
-		if (e.success) {
-			var data = {
-		link : wikilnk,
-		name : dob + " - " + eventText + " " + name,
-		message : eventText + " - " + name,
-		caption : "Wikipedia link of " + name,
-		picture : piclink,
-		description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
-	};
-	fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
-		}
-		if (e.error) {
-			Ti.API.info('login error' + e.error);
-		}
-	});
-	fb.authorize();
-	if (count == 0) {
+	if (fb.loggedIn) {
 		var data = {
-		link : wikilnk,
-		name : dob + " - " + eventText + " " + name,
-		message : eventText + " - " + name,
-		caption : "Wikipedia link of " + name,
-		picture : piclink,
-		description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
-	};
-	fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
+			link : wikilnk,
+			name : dob + " - " + eventText + " " + name,
+			message : eventText + " - " + name,
+			caption : "Wikipedia link of " + name,
+			picture : piclink,
+			description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+		};
+		fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
+	} else {
+		fb.forceDialogAuth = true;
+		fb.addEventListener('login', function(e) {
+			if (e.success) {
+				var data = {
+					link : wikilnk,
+					name : dob + " - " + eventText + " " + name,
+					message : eventText + " - " + name,
+					caption : "Wikipedia link of " + name,
+					picture : piclink,
+					description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+				};
+				fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
+			}
+			if (e.error) {
+				Ti.API.info('login error' + e.error);
+			}
+		});
+		fb.authorize();
 	}
+
 }
 
 // method to show facebook wall post status
@@ -504,7 +504,7 @@ function showRequestResult(e) {
 	if (e.success) {
 		s = 'Event Shared on your Facebook Wall..!!';
 
-	} else {
+	} else if (e.error) {
 		s = 'Something Went Wrong. We will come back soon';
 	}
 	alert(s);
