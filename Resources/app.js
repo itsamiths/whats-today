@@ -512,7 +512,18 @@ function showRequestResult(e) {
 	alert(s);
 }
 
-
+if (Ti.Android.isServiceRunning(Ti.Android.createServiceIntent({url: 'EventNotificatoinService.js'}))) {
+		Ti.API.info('Service IS running');
+	} else {
+		Ti.API.info('Service is NOT running');
+		Ti.API.info('Starting via startService');
+	var intent = Ti.Android.createServiceIntent({
+		url: 'EventNotificatoinService.js'
+	});
+	intent.putExtra('interval',  1000);
+	intent.putExtra('message', 'Hi from started service');
+	Ti.Android.startService(intent);
+	}
 //Import our module into our Titanium App
 // var alarmModule = require('bencoding.alarmmanager');
 // var alarmManager = alarmModule.createAlarmManager();

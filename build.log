@@ -1,8 +1,8 @@
 Logfile initialized
 [INFO] logfile = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
 [INFO] logfile = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
-[DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py emulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854 armeabi-v7a
 [DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py simulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854
+[DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py emulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854 armeabi-v7a
 [INFO] Launching Android emulator...one moment
 [DEBUG] From: C:\Program Files\Android\android-sdk\tools\emulator.exe
 [INFO] Building Whats Today for Android ... one moment
@@ -11,125 +11,185 @@ Logfile initialized
 [DEBUG] AVD Skin: WVGA854
 [DEBUG] AVD ABI: armeabi-v7a
 [DEBUG] SDK: C:\Program Files\Android\android-sdk
-[INFO] Emulator is running.
 [INFO] Titanium SDK version: 3.1.1 (06/15/13 16:09 f7592c1)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
+[INFO] Emulator is running.
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.016000 seconds on emulator to get ready
+[DEBUG] waited 0.047000 seconds on emulator to get ready
 [DEBUG] com.mkamithkumar.whatstoday installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\app.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\app.js
+[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\appicon.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\appicon.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\default.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\default.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\EventNotificatoinService.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\EventNotificatoinService.js
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\Thumbs.db => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\Thumbs.db
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\app.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\app.js
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\com.scule.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\com.scule.js
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\6_social_person.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\6_social_person.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\actionbar_background_tile.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\actionbar_background_tile.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\choosecategory.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\choosecategory.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\datepicker.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\datepicker.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\facebook-32.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\facebook-32.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\ic_action_emo_cool.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\ic_action_emo_cool.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\ic_action_emo_cry.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\ic_action_emo_cry.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\ic_action_emo_laugh.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\ic_action_emo_laugh.png
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\Thumbs.db => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\Thumbs.db
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\Vaali_(poet).jpg => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\Vaali_(poet).jpg
+[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\Wikipedia-icon.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\Wikipedia-icon.png
 [DEBUG] LiveView not enabled
-[INFO] Tiapp.xml unchanged, skipping class generation
+[TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [INFO] Copying platform-specific files for 'Facebook' module
 [DEBUG] found special platform files dir = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\platform\android
-[DEBUG] Removed duplicate string [com_facebook_dialogloginactivity_ok_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_out_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_in_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_logged_in_as] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_logged_in_using_facebook] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_out_action] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_cancel_action] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_logo_content_description] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_log_in_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_logged_in] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_not_logged_in] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_catetory_only_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_were_here_only_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_picker_done_button_text] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_choose_friends] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_nearby] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loading] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_internet_permission_error_title] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_internet_permission_error_message] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_web_login] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_relogin] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_password_changed] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_reconnect] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_permissions] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-es\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_out_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_in_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_logged_in_as] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_logged_in_using_facebook] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_out_action] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_cancel_action] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_logo_content_description] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_log_in_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_logged_in] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_not_logged_in] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_catetory_only_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_were_here_only_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_picker_done_button_text] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_choose_friends] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_nearby] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loading] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_internet_permission_error_title] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_internet_permission_error_message] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_web_login] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_relogin] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_password_changed] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_reconnect] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_permissions] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_dialogloginactivity_ok_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-he\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_out_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_in_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_logged_in_as] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_logged_in_using_facebook] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_log_out_action] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loginview_cancel_action] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_logo_content_description] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_log_in_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_logged_in] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_usersettingsfragment_not_logged_in] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_catetory_only_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_placepicker_subtitle_were_here_only_format] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_picker_done_button_text] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_choose_friends] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_nearby] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_loading] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_internet_permission_error_title] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_internet_permission_error_message] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_web_login] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_relogin] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_password_changed] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_reconnect] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_requesterror_permissions] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate string [com_facebook_dialogloginactivity_ok_button] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values-iw\strings.xml
-[DEBUG] Removed duplicate node [com_facebook_picker_fragment] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\attrs.xml
-[DEBUG] Removed duplicate node [com_facebook_friend_picker_fragment] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\attrs.xml
-[DEBUG] Removed duplicate node [com_facebook_place_picker_fragment] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\attrs.xml
-[DEBUG] Removed duplicate node [com_facebook_login_view] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\attrs.xml
-[DEBUG] Removed duplicate node [com_facebook_profile_picture_view] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\attrs.xml
-[DEBUG] Removed duplicate node [com_facebook_blue] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_usersettingsfragment_connected_text_color] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_usersettingsfragment_connected_shadow_color] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_usersettingsfragment_not_connected_text_color] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_text_color] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_usersettingsfragment_profile_picture_width] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_usersettingsfragment_profile_picture_height] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_padding_left] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_padding_right] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_padding_top] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_padding_bottom] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_width] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_height] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_text_size] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_profilepictureview_preset_size_small] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_profilepictureview_preset_size_normal] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_profilepictureview_preset_size_large] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_default_style] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
-[DEBUG] Removed duplicate node [com_facebook_loginview_silver_style] from C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\res\values\styles.xml
+[DEBUG] app stylesheet => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\ApplicationStylesheet.java
+[DEBUG] copying app icon: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\appicon.png
+[DEBUG] generating theme.xml
+[DEBUG] found splash screen at C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\default.png
 [INFO] Detected custom ApplicationManifest.xml -- no Titanium version migration supported
 [DEBUG] Added 'screenSize' to <activity android:configChanges> because targeted api level 16 is >= 13
-[INFO] Re-launching application ... Whats Today
-[INFO] Launching application ... Whats Today
-[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.mkamithkumar.whatstoday/.WhatsTodayActivity }
-
-[INFO] Relaunched Whats Today ... Application should be running.
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\Android_EventNotificatoinServiceService.java to javac build list
+[DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\ApplicationStylesheet.java to javac build list
+[DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\R.java to javac build list
+[DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayActivity.java to javac build list
+[DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayAppInfo.java to javac build list
+[DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayApplication.java to javac build list
+[DEBUG] Building Java Sources: "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\Android_EventNotificatoinServiceService.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\ApplicationStylesheet.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\R.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayActivity.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayAppInfo.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayApplication.java"
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/images/6_social_person.png
+[DEBUG] from resource zip => assets/Resources/images/Vaali_(poet).jpg
+[DEBUG] from resource zip => assets/Resources/images/Wikipedia-icon.png
+[DEBUG] from resource zip => assets/Resources/images/actionbar_background_tile.png
+[DEBUG] from resource zip => assets/Resources/images/choosecategory.png
+[DEBUG] from resource zip => assets/Resources/images/datepicker.png
+[DEBUG] from resource zip => assets/Resources/images/facebook-32.png
+[DEBUG] from resource zip => assets/Resources/images/ic_action_emo_cool.png
+[DEBUG] from resource zip => assets/Resources/images/ic_action_emo_cry.png
+[DEBUG] from resource zip => assets/Resources/images/ic_action_emo_laugh.png
+[DEBUG] from resource zip => assets/Resources/EventNotificatoinService.js
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/appicon.png
+[DEBUG] from resource zip => assets/Resources/com.scule.js
+[DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/drawable/btn_check_buttonless_on_64.png
+[DEBUG] from resource zip => res/drawable/btn_more_64.png
+[DEBUG] from resource zip => res/drawable/com_facebook_button_check.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_button_check_off.png
+[DEBUG] from resource zip => res/drawable/com_facebook_button_check_on.png
+[DEBUG] from resource zip => res/drawable/com_facebook_button_grey_focused.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_button_grey_normal.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_button_grey_pressed.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_close.png
+[DEBUG] from resource zip => res/drawable/com_facebook_icon.png
+[DEBUG] from resource zip => res/drawable/com_facebook_list_divider.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_list_section_header_background.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_loginbutton_blue.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_loginbutton_blue_focused.png
+[DEBUG] from resource zip => res/drawable/com_facebook_loginbutton_blue_normal.png
+[DEBUG] from resource zip => res/drawable/com_facebook_loginbutton_blue_pressed.png
+[DEBUG] from resource zip => res/drawable/com_facebook_loginbutton_silver.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_logo.png
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_item_background.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_list_focused.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_list_longpressed.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_list_pressed.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_list_selector.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_list_selector_background_transition.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_list_selector_disabled.9.png
+[DEBUG] from resource zip => res/drawable/com_facebook_picker_top_button.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_place_default_icon.png
+[DEBUG] from resource zip => res/drawable/com_facebook_profile_default_icon.png
+[DEBUG] from resource zip => res/drawable/com_facebook_profile_picture_blank_portrait.png
+[DEBUG] from resource zip => res/drawable/com_facebook_profile_picture_blank_square.png
+[DEBUG] from resource zip => res/drawable/com_facebook_top_background.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_top_button.xml
+[DEBUG] from resource zip => res/drawable/com_facebook_usersettingsfragment_background_gradient.xml
+[DEBUG] from resource zip => res/drawable/disclosure_64.png
+[DEBUG] from resource zip => res/drawable/titanium_facebook_login.png
+[DEBUG] from resource zip => res/drawable/titanium_facebook_login_down.png
+[DEBUG] from resource zip => res/drawable/titanium_facebook_login_wide.png
+[DEBUG] from resource zip => res/drawable/titanium_facebook_login_wide_down.png
+[DEBUG] from resource zip => res/drawable/titanium_facebook_logout.png
+[DEBUG] from resource zip => res/drawable/titanium_facebook_logout_down.png
+[DEBUG] from resource zip => res/layout/com_facebook_friendpickerfragment.xml
+[DEBUG] from resource zip => res/layout/com_facebook_login_activity_layout.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_activity_circle_row.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_checkbox.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_image.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_list_row.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_list_section_header.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_search_box.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_title_bar.xml
+[DEBUG] from resource zip => res/layout/com_facebook_picker_title_bar_stub.xml
+[DEBUG] from resource zip => res/layout/com_facebook_placepickerfragment.xml
+[DEBUG] from resource zip => res/layout/com_facebook_placepickerfragment_list_row.xml
+[DEBUG] from resource zip => res/layout/com_facebook_usersettingsfragment.xml
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => res/layout/titanium_ui_list_header_or_footer.xml
+[DEBUG] from resource zip => res/layout/titanium_ui_list_item.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_button_grey_normal.9.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_button_grey_pressed.9.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_close.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_icon.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_loginbutton_blue_focused.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_loginbutton_blue_normal.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_loginbutton_blue_pressed.png
+[DEBUG] from resource zip => res/drawable-hdpi/com_facebook_logo.png
+[DEBUG] from resource zip => res/drawable-ldpi/com_facebook_close.png
+[DEBUG] from resource zip => res/drawable-ldpi/com_facebook_icon.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_button_grey_focused.9.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_close.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_loginbutton_blue_focused.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+[DEBUG] from resource zip => res/drawable-xhdpi/com_facebook_logo.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_64.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG] from JAR C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG] installing native lib: C:\Documents and Settings\amith.mk\Application Data\Titanium\modules\android\facebook\3.0.0\libs\armeabi\libfacebook.so
+[DEBUG] installing native lib: C:\Documents and Settings\amith.mk\Application Data\Titanium\modules\android\facebook\3.0.0\libs\armeabi-v7a\libfacebook.so
+[DEBUG] installing native lib: C:\Documents and Settings\amith.mk\Application Data\Titanium\modules\android\facebook\3.0.0\libs\x86\libfacebook.so
+[DEBUG] installing native lib: C:\Documents and Settings\amith.mk\Application Data\Titanium\modules\android\bencoding.alarmmanager\0.8\libs\armeabi\libbencoding.alarmmanager.so
+[DEBUG] installing native lib: C:\Documents and Settings\amith.mk\Application Data\Titanium\modules\android\bencoding.alarmmanager\0.8\libs\armeabi-v7a\libbencoding.alarmmanager.so
+[DEBUG] installing native lib: C:\Documents and Settings\amith.mk\Application Data\Titanium\modules\android\bencoding.alarmmanager\0.8\libs\x86\libbencoding.alarmmanager.so
+[DEBUG] installing native SDK libs
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.016000 seconds on emulator to get ready
+[INFO] Installing application on emulator
