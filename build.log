@@ -4,8 +4,8 @@ Logfile initialized
 [DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py simulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854
 [DEBUG] C:\Documents and Settings\amith.mk\Application Data\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py emulator Whats Today C:\Program Files\Android\android-sdk C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday 25 WVGA854 armeabi-v7a
 [INFO] Launching Android emulator...one moment
-[DEBUG] From: C:\Program Files\Android\android-sdk\tools\emulator.exe
 [INFO] Building Whats Today for Android ... one moment
+[DEBUG] From: C:\Program Files\Android\android-sdk\tools\emulator.exe
 [DEBUG] SDCard: C:\Documents and Settings\amith.mk\.titanium\android2.sdcard
 [DEBUG] AVD ID: 25
 [DEBUG] AVD Skin: WVGA854
@@ -14,37 +14,18 @@ Logfile initialized
 [INFO] Titanium SDK version: 3.1.1 (06/15/13 16:09 f7592c1)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
-[INFO] Emulator is running.
 [DEBUG] Device connected... (waited 0 seconds)
 [DEBUG] waited 0.047000 seconds on emulator to get ready
+[INFO] Emulator is running.
 [DEBUG] com.mkamithkumar.whatstoday installed? True
-[INFO] Fastdev server running, deploying in Fastdev mode
+[WARN] Fastdev enabled, but server isn't running, deploying normally
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\appicon.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\appicon.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\default.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\default.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\EventNotificatoinService.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\EventNotificatoinService.js
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\android\Thumbs.db => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\Thumbs.db
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\app.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\app.js
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\com.scule.js => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\com.scule.js
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\6_social_person.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\6_social_person.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\actionbar_background_tile.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\actionbar_background_tile.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\choosecategory.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\choosecategory.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\datepicker.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\datepicker.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\facebook-32.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\facebook-32.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\ic_action_emo_cool.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\ic_action_emo_cool.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\ic_action_emo_cry.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\ic_action_emo_cry.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\ic_action_emo_laugh.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\ic_action_emo_laugh.png
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\Thumbs.db => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\Thumbs.db
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\Vaali_(poet).jpg => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\Vaali_(poet).jpg
-[TRACE] COPYING CREATED FILE: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\Resources\images\Wikipedia-icon.png => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\images\Wikipedia-icon.png
 [DEBUG] LiveView not enabled
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [INFO] Copying platform-specific files for 'Facebook' module
 [DEBUG] found special platform files dir = C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\platform\android
-[DEBUG] app stylesheet => C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\ApplicationStylesheet.java
 [DEBUG] copying app icon: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\appicon.png
 [DEBUG] generating theme.xml
 [DEBUG] found splash screen at C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\default.png
@@ -52,12 +33,11 @@ Logfile initialized
 [DEBUG] Added 'screenSize' to <activity android:configChanges> because targeted api level 16 is >= 13
 [TRACE] Writing out AndroidManifest.xml
 [DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\Android_EventNotificatoinServiceService.java to javac build list
-[DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\ApplicationStylesheet.java to javac build list
 [DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\R.java to javac build list
 [DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayActivity.java to javac build list
 [DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayAppInfo.java to javac build list
 [DEBUG] adding C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayApplication.java to javac build list
-[DEBUG] Building Java Sources: "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\Android_EventNotificatoinServiceService.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\ApplicationStylesheet.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\R.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayActivity.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayAppInfo.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayApplication.java"
+[DEBUG] Building Java Sources: "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\Android_EventNotificatoinServiceService.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\R.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayActivity.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayAppInfo.java" "C:\\Documents and Settings\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayApplication.java"
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: C:\Documents and Settings\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\app-unsigned.apk
@@ -193,3 +173,7 @@ Logfile initialized
 [DEBUG] Device connected... (waited 0 seconds)
 [DEBUG] waited 0.016000 seconds on emulator to get ready
 [INFO] Installing application on emulator
+[INFO] Launching application ... Whats Today
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.mkamithkumar.whatstoday/.WhatsTodayActivity }
+
+[INFO] Deployed Whats Today ... Application should be running.
