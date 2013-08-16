@@ -30,11 +30,43 @@
 	</iphone>
 	<android xmlns:android="http://schemas.android.com/apk/res/android">
 		<tool-api-level>16</tool-api-level>
-		<manifest>
+		<manifest android:installLocation="auto" android:versionCode="1" android:versionName="1" package="com.mkamithkumar.whatstoday" xmlns:android="http://schemas.android.com/apk/res/android">
 			<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="11"/>
+			<supports-screens android:anyDensity="true"/>
+			<application android:debuggable="false" android:icon="@drawable/appicon" android:label="Whats Today" android:name="WhatsTodayApplication" android:theme="@android:style/Theme.DeviceDefault.Light">
+
+				<receiver android:name="bencoding.alarmmanager.AlarmNotificationListener"/>
+				<receiver android:name="bencoding.alarmmanager.AlarmServiceListener"/>
+				<activity android:configChanges="keyboardHidden|orientation|screenSize"
+				android:alwaysRetainTaskState="true"
+				android:label="Whats Today"
+				android:name=".WhatsTodayActivity"
+				android:theme="@style/Theme.Titanium"
+				android:launchMode="singleTop">
+					<intent-filter>
+						<action android:name="android.intent.action.MAIN"/>
+						<category android:name="android.intent.category.LAUNCHER"/>
+					</intent-filter>
+				</activity>
+				<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="org.appcelerator.titanium.TiActivity"/>
+				<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="org.appcelerator.titanium.TiTranslucentActivity" android:theme="@android:style/Theme.Translucent"/>
+				<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="org.appcelerator.titanium.TiModalActivity" android:theme="@android:style/Theme.Translucent"/>
+				<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="ti.modules.titanium.ui.TiTabActivity"/>
+				<activity android:name="ti.modules.titanium.ui.android.TiPreferencesActivity"/>
+				<service android:exported="false" android:name="org.appcelerator.titanium.analytics.TiAnalyticsService"/>
+
+			</application>
+			<uses-permission android:name="android.permission.VIBRATE"/>
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.VIBRATE"/>
+			<uses-permission android:name="android.permission.WAKE_LOCK"/>
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+			<uses-permission android:name="android.permission.INTERNET"/>
+
 		</manifest>
 		<services>
-			<service  url="android/EventNotificatoinService.js" type="interval"/>
+			<service type="interval" url="dailyEventNotificatoin.js"/>
 		</services>
 	</android>
 	<mobileweb>

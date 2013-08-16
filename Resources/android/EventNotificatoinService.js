@@ -1,1 +1,0 @@
-Titanium.API.info('Hello World, I am a Service');

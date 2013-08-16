@@ -291,9 +291,9 @@ function getLocalData(selectedDate, collection, category) {
 		showData(JSON.parse(keyFind[0]['value'].text));
 		Ti.API.info('not inside ajax');
 	} else {
-			Ti.API.info('inside ajax');
-			getDataByDate(selectedDate, collection, category);
-		
+		Ti.API.info('inside ajax');
+		getDataByDate(selectedDate, collection, category);
+
 	}
 
 	//jsonData = JSON.parse(o[0]['value'].text);
@@ -512,38 +512,18 @@ function showRequestResult(e) {
 	alert(s);
 }
 
-if (Ti.Android.isServiceRunning(Ti.Android.createServiceIntent({url: 'EventNotificatoinService.js'}))) {
-		Ti.API.info('Service IS running');
-	} else {
-		Ti.API.info('Service is NOT running');
-		Ti.API.info('Starting via startService');
-	var intent = Ti.Android.createServiceIntent({
-		url: 'EventNotificatoinService.js'
+//Import bencoding alarmmanager module into our Titanium App
+var alarmModule = require('bencoding.alarmmanager');
+var alarmManager = alarmModule.createAlarmManager();
+
+var isRunning = Ti.App.Properties.getBool("service_running", false);//get service running bool status
+if (isRunning) {
+	Ti.API.info('service is running');
+} else {
+	Ti.API.info('service is not running');
+	alarmManager.addAlarmService({
+		service : 'com.mkamithkumar.whatstoday.DailyEventNotificatoinService',
+		hour : "08",
+		repeat : 'daily'
 	});
-	intent.putExtra('interval',  1000);
-	intent.putExtra('message', 'Hi from started service');
-	Ti.Android.startService(intent);
-	}
-//Import our module into our Titanium App
-// var alarmModule = require('bencoding.alarmmanager');
-// var alarmManager = alarmModule.createAlarmManager();
-// //Below is an example on how you can provide a full date to schedule your alarm
-// //Set an Alarm to publish a notification in about two minutes and repeat each minute
-// //Create a date variable to be used later 
-// var now = new Date();
-// Ti.API.info(''+now.getTime());
-// 
-// alarmManager.addAlarmNotification({		
-		// requestCode: 64, //Request ID used to identify a specific alarm. Provide the same requestCode twice to update 
-		// // year: now.getFullYear(),
-		// // month: now.getMonth(),
-		// // day: now.getDate(),
-		// hour: "08",
-		// minute: "00" , //Set the number of minutes until the alarm should go off
-		// contentTitle:'Alarm #4', //Set the title of the Notification that will appear
-		// contentText:'Alarm & Notify Scheduled Repeat', //Set the body of the notification that will apear
-		// icon: Ti.App.Android.R.drawable.appicon,
-		// tickerText: 'Whats Today Event Notification!',
-		// repeat:'daily' //You can use the words hourly,daily,weekly,monthly,yearly or you can provide milliseconds.
-	// });	
-   
+}
