@@ -524,6 +524,7 @@ if (isRunning) {
 	alarmManager.addAlarmService({
 		service : 'com.mkamithkumar.whatstoday.DailyEventNotificatoinService',
 		hour : "08",
+		minute:"00",
 		repeat : 'daily'
 	});
 }
