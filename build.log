@@ -1,6 +1,6 @@
 Logfile initialized
 [INFO] logfile = C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build.log
-[DEBUG] C:\Users\amith.mk\AppData\Roaming\Titanium\mobilesdk\win32\3.1.2.GA\android\builder.py distribute Whats Today C:\Program Files (x86)\Android\android-sdk C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.mkamithkumar.whatstoday C:\Users\amith.mk\Documents\android.keystore android whatstoday C:\Users\amith.mk\Documents
+[DEBUG] C:\Users\amith.mk\AppData\Roaming\Titanium\mobilesdk\win32\3.1.2.GA\android\builder.py distribute Whats Today C:\Program Files (x86)\Android\android-sdk C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today com.itsamiths.whatstoday C:\Users\amith.mk\Documents\whatstoday.keystore android whatstoday C:\Users\amith.mk\Documents
 [INFO] Titanium SDK version: 3.1.2 (08/14/13 12:45 5ceaff8)
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
@@ -28,20 +28,20 @@ Logfile initialized
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [INFO] Copying platform-specific files for 'Facebook' module
-[DEBUG] app stylesheet => C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\ApplicationStylesheet.java
+[DEBUG] app stylesheet => C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\ApplicationStylesheet.java
 [DEBUG] copying app icon: C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\appicon.png
 [DEBUG] generating theme.xml
 [DEBUG] found splash screen at C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\assets\Resources\default.png
 [DEBUG] Added 'screenSize' to <activity android:configChanges> because targeted api level 16 is >= 13
 [TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\ApplicationStylesheet.java to javac build list
-[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\AssetCryptImpl.java to javac build list
-[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\DailyEventNotificatoinService.java to javac build list
-[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\R.java to javac build list
-[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayActivity.java to javac build list
-[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayAppInfo.java to javac build list
-[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\mkamithkumar\whatstoday\WhatsTodayApplication.java to javac build list
-[DEBUG] Building Java Sources: "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\ApplicationStylesheet.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\AssetCryptImpl.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\DailyEventNotificatoinService.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\R.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayActivity.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayAppInfo.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\mkamithkumar\\whatstoday\\WhatsTodayApplication.java"
+[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\ApplicationStylesheet.java to javac build list
+[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\AssetCryptImpl.java to javac build list
+[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\DailyEventNotificatoinService.java to javac build list
+[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\R.java to javac build list
+[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\WhatsTodayActivity.java to javac build list
+[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\WhatsTodayAppInfo.java to javac build list
+[DEBUG] adding C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\gen\com\itsamiths\whatstoday\WhatsTodayApplication.java to javac build list
+[DEBUG] Building Java Sources: "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\itsamiths\\whatstoday\\ApplicationStylesheet.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\itsamiths\\whatstoday\\AssetCryptImpl.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\itsamiths\\whatstoday\\DailyEventNotificatoinService.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\itsamiths\\whatstoday\\R.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\itsamiths\\whatstoday\\WhatsTodayActivity.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\itsamiths\\whatstoday\\WhatsTodayAppInfo.java" "C:\\Users\\amith.mk\\Documents\\Titanium_Studio_Workspace\\whats-today\\build\\android\\gen\\com\\itsamiths\\whatstoday\\WhatsTodayApplication.java"
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: C:\Users\amith.mk\Documents\Titanium_Studio_Workspace\whats-today\build\android\bin\app-unsigned.apk

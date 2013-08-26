@@ -478,7 +478,8 @@ function fb_share(name, wikilnk, piclink, professiondet) {
 			name :  eventText + " " + name,
 			message : eventText + " - " + name,
 			caption : "Wikipedia link of " + name,
-			picture : piclink,
+			picture :'http://docs.moodle.org/24/en/images_en/7/7c/F1.png',
+			//picture : piclink,
 			//description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
 			description : name + " is a " + professiondet + " ," + eventDesctext + " today "+".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
 		};
@@ -493,7 +494,8 @@ function fb_share(name, wikilnk, piclink, professiondet) {
 					name :  eventText + " " + name,
 					message : eventText + " - " + name,
 					caption : "Wikipedia link of " + name,
-					picture : piclink,
+					picture :'http://docs.moodle.org/24/en/images_en/7/7c/F1.png',
+					//picture : piclink,
 					//description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
 					description : name + " is a " + professiondet + " ," + eventDesctext + " today "+".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
 				};
@@ -532,11 +534,11 @@ if (isRunning) {
 	Ti.API.info('service is not running');
 
 	alarmManager.addAlarmService({
-		service : 'com.mkamithkumar.whatstoday.DailyEventNotificatoinService',
+		service : 'com.itsamiths.whatstoday.DailyEventNotificatoinService',
 		//year : now.getFullYear(),
 		//month : now.getMonth(),
 		//day : now.getDate(),
-		hour : "08",
+		hour : "00",
 		minute : "00",
 		repeat : 'daily'
 	}); 

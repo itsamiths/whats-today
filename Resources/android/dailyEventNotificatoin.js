@@ -15,7 +15,7 @@ function setNotification(alarm) {
 	var activity = Ti.Android.currentActivity;
 	var intent = Ti.Android.createIntent({
 		action : Ti.Android.ACTION_MAIN,
-		className : 'com.mkamithkumar.whatstoday.WhatsTodayActivity',
+		className : 'com.itsamiths.whatstoday.WhatsTodayActivity',
 		flags : Ti.Android.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Ti.Android.FLAG_ACTIVITY_SINGLE_TOP
 	});
 	intent.addCategory(Titanium.Android.CATEGORY_LAUNCHER);
@@ -34,7 +34,7 @@ function setNotification(alarm) {
 		contentTitle : 'Whats Today - Featured Event',
 		contentText : 'Tap to see todays featured event',
 		tickerText : 'Whats Today Event Notification!',
-		when : "08",
+		when : "00",
 		icon : Ti.App.Android.R.drawable.appicon,
 		flags : Titanium.Android.FLAG_AUTO_CANCEL | Titanium.Android.FLAG_SHOW_LIGHTS | Titanium.Android.FLAG_INSISTENT,
 		sound : Titanium.Android.NotificationManager.DEFAULT_SOUND

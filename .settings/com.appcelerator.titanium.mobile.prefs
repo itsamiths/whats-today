@@ -1,10 +1,9 @@
-android/ATTR_MINIFY=true
 android/ATTR_PROJECT_NAME=whats-today
 android/abi=armeabi-v7a
 android/distribute_path=C\:\\Users\\amith.mk\\Documents
 android/keystore_alias=whatstoday
 android/keystore_password=android
-android/keystore_path=C\:\\Users\\amith.mk\\Documents\\android.keystore
+android/keystore_path=C\:\\Users\\amith.mk\\Documents\\whatstoday.keystore
 android/recent_output=C\:\\Users\\amith.mk\\Documents
 android/sdk_version=Android 4.0
 eclipse.preferences.version=1

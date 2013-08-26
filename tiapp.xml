@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.mkamithkumar.whatstoday</id>
+    <id>com.itsamiths.whatstoday</id>
     <name>Whats Today</name>
     <version>1.0</version>
     <publisher>amith.mk</publisher>
     <url>http://itsamiths.github.io</url>
-    <description>not specified</description>
-    <copyright>2013 by amith.mk</copyright>
+    <description>know the importance of today in history</description>
+    <copyright>2013 by amith.mk(Amith Kumar M K)</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
@@ -29,7 +29,7 @@
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <tool-api-level>16</tool-api-level>
-        <manifest android:installLocation="auto" android:versionCode="1" android:versionName="1" package="com.mkamithkumar.whatstoday" xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest android:installLocation="auto" android:versionCode="1" android:versionName="1.0" package="com.itsamiths.whatstoday" xmlns:android="http://schemas.android.com/apk/res/android">
             <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="11"/>
             <supports-screens android:anyDensity="true"/>
             <application android:debuggable="false" android:icon="@drawable/appicon" android:label="Whats Today" android:name="WhatsTodayApplication" android:theme="@android:style/Theme.DeviceDefault.Light">
