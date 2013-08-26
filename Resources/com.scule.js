@@ -3953,7 +3953,7 @@ var Scule = {
          */
         this.isDate = function(o) {
             return (o instanceof Date || o instanceof Scule.db.classes.ObjectDate);
-        }
+        };
 
         /**
          * Normalizes the provided object to a JavaScript Date object
@@ -3971,7 +3971,7 @@ var Scule = {
                 return date.getTime();
             }
             return date;
-        }
+        };
 
         this.$eq = function(a, b) {
             return this.normalizeDate(a) === this.normalizeDate(b);
@@ -4435,7 +4435,7 @@ var Scule = {
             }
         
             closure     += updates.join('\n');
-            closure     += '\n\t});\n'
+            closure     += '\n\t});\n';
             closure     += '\treturn objects;\n';
             closure     += '}\n';
 
@@ -4466,7 +4466,7 @@ var Scule = {
                         }
                     }
                 }
-            }
+            };
             serialize(o);
             return JSON.stringify(o);
         };  
@@ -4509,11 +4509,11 @@ var Scule = {
                         ors = ' && ' + ors;
                     }
                     closure += '\t\tif ((' + ands.join(' && ') + ')' + ors + ') {\n';
-                    closure += '\t\t\tr[r.length] = o;\n'
+                    closure += '\t\t\tr[r.length] = o;\n';
                     closure += '\t\t}\n';
                 } else if (ors.length > 0) {
                     closure += '\t\tif (' + ors + ') {\n';
-                    closure += '\t\t\tr[r.length] = o;\n'
+                    closure += '\t\t\tr[r.length] = o;\n';
                     closure += '\t\t}\n';            
                 }
                 closure += '\t});\n';

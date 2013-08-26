@@ -248,13 +248,13 @@ self.addEventListener('open', function(e) {
 			showAsAction : Ti.Android.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW
 		});
 		others.addEventListener("click", function(e) {
-			category = "N/A";
+			category = "others";
 			// set category global variable value
 			// call to data fetching method
 			getLocalData(selectedDate, collection, category);
 		});
 
-	}
+	};
 });
 
 // birth tab focussed
@@ -324,7 +324,8 @@ function showData(jsonValue) {
 				backgroundColor : j % 2 == 0 ? '#EEE' : '#FFF'
 			});
 			var pic = Ti.UI.createImageView({
-				image : 'http://upload.wikimedia.org/wikipedia/en/thumb/7/75/Vaali_%28poet%29.jpg/90px-Vaali_%28poet%29.jpg',
+				//image : 'http://upload.wikimedia.org/wikipedia/en/thumb/7/75/Vaali_%28poet%29.jpg/90px-Vaali_%28poet%29.jpg',
+				image : 'images/6_social_person.png',
 				defaultImage : 'images/6_social_person.png',
 				width : 90,
 				height : 90,
@@ -361,7 +362,7 @@ function showData(jsonValue) {
 				height : 40
 			});
 			var dob = Titanium.UI.createLabel({
-				text : '11 June 1990',
+				//text : '11 June 1990',
 				font : {
 					fontSize : 16,
 				},
@@ -382,13 +383,15 @@ function showData(jsonValue) {
 			fbShare.addEventListener('click', function(e) {
 				clickedPicLink = e.source.parent.children[0].image;
 				clickedName = e.source.parent.children[1].text;
-				clickedDOB = e.source.parent.children[3].text;
-				clickedWikiLink = e.source.parent.children[5].lnk;
+				//clickedDOB = e.source.parent.children[3].text;
+				//clickedWikiLink = e.source.parent.children[5].lnk;
+				clickedWikiLink = e.source.parent.children[4].lnk;
 				professoinDetails = e.source.parent.children[2].text;
 				// call to facebook authorize method
-				fb_share(clickedName, clickedDOB, clickedWikiLink, clickedPicLink, professoinDetails);
+				//fb_share(clickedName, clickedDOB, clickedWikiLink, clickedPicLink, professoinDetails);
+				fb_share(clickedName, clickedWikiLink, clickedPicLink, professoinDetails);
 			});
-			var link = "http://www.wikipedia.org/amith";
+			var link = "http://www.wikipedia.org";
 			var wikiLnk = Ti.UI.createImageView({
 				lnk : link,
 				image : 'images/Wikipedia-icon.png',
@@ -403,7 +406,7 @@ function showData(jsonValue) {
 			row.add(pic);
 			row.add(name);
 			row.add(profession);
-			row.add(dob);
+			//row.add(dob);
 			row.add(fbShare);
 			row.add(wikiLnk);
 			row.className = 'coutry_row';
@@ -459,7 +462,8 @@ searchBar.addEventListener('cancel', function(e) {
 });
 
 //method to authorize facebook login
-function fb_share(name, dob, wikilnk, piclink, professiondet) {
+//function fb_share(name, dob, wikilnk, piclink, professiondet) {
+function fb_share(name, wikilnk, piclink, professiondet) {
 	if (collection == "info_birth") {
 		eventText = "Birthday of";
 		eventDesctext = "born on";
@@ -470,11 +474,13 @@ function fb_share(name, dob, wikilnk, piclink, professiondet) {
 	if (fb.loggedIn) {
 		var data = {
 			link : wikilnk,
-			name : dob + " - " + eventText + " " + name,
+			//name : dob + " - " + eventText + " " + name,
+			name :  eventText + " " + name,
 			message : eventText + " - " + name,
 			caption : "Wikipedia link of " + name,
 			picture : piclink,
-			description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+			//description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+			description : name + " is a " + professiondet + " ," + eventDesctext + " today "+".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
 		};
 		fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
 	} else {
@@ -483,11 +489,13 @@ function fb_share(name, dob, wikilnk, piclink, professiondet) {
 			if (e.success) {
 				var data = {
 					link : wikilnk,
-					name : dob + " - " + eventText + " " + name,
+					//name : dob + " - " + eventText + " " + name,
+					name :  eventText + " " + name,
 					message : eventText + " - " + name,
 					caption : "Wikipedia link of " + name,
 					picture : piclink,
-					description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+					//description : name + " is a " + professiondet + " ," + eventDesctext + " " + dob + ".This is information is from www.whats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
+					description : name + " is a " + professiondet + " ," + eventDesctext + " today "+".This is information is from www.wats2day.com. To get daily updates on your android mobile download Whats Today app from play store. ",
 				};
 				fb.requestWithGraphPath('me/feed?access_token=' + fb.accessToken, data, 'POST', showRequestResult);
 			}
@@ -516,15 +524,21 @@ function showRequestResult(e) {
 var alarmModule = require('bencoding.alarmmanager');
 var alarmManager = alarmModule.createAlarmManager();
 
+var now = new Date();
 var isRunning = Ti.App.Properties.getBool("service_running", false);//get service running bool status
 if (isRunning) {
 	Ti.API.info('service is running');
 } else {
 	Ti.API.info('service is not running');
+
 	alarmManager.addAlarmService({
 		service : 'com.mkamithkumar.whatstoday.DailyEventNotificatoinService',
+		//year : now.getFullYear(),
+		//month : now.getMonth(),
+		//day : now.getDate(),
 		hour : "08",
-		minute:"00",
+		minute : "00",
 		repeat : 'daily'
-	});
+	}); 
+
 }

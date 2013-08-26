@@ -34,7 +34,7 @@ function setNotification(alarm) {
 		contentTitle : 'Whats Today - Featured Event',
 		contentText : 'Tap to see todays featured event',
 		tickerText : 'Whats Today Event Notification!',
-		//when : new Date().getTime(),
+		when : "08",
 		icon : Ti.App.Android.R.drawable.appicon,
 		flags : Titanium.Android.FLAG_AUTO_CANCEL | Titanium.Android.FLAG_SHOW_LIGHTS | Titanium.Android.FLAG_INSISTENT,
 		sound : Titanium.Android.NotificationManager.DEFAULT_SOUND
